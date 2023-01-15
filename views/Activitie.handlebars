@@ -1,0 +1,16 @@
+{{#each activities}}
+<div class="card">
+  <h2 id="activitie"> {{this.nom}}</h2>
+  <p id="description"><span>discription: </span> {{this.description}}</p>
+  <p id="capacite"> <span>Capacité: : </span> {{this.capacite}}</p>
+  <p id="nbCours"><span> Nombre de cours: </span>{{this.nb_cours}}</p>
+  <p id="nbreInscrit"><span> Nombre de personne inscrit: </span>{{this.nbrInscrit}}/{{this.capacite}}</p>
+  <p id="Date"><span> Date début: </span> {{afficheDAte this.date_debut}}</p>
+  {{#if this.inscrit }}
+  <input id="inscireActivitie" type="submit" data-id="{{this.id_cours}}" value="S'inscrire" disabled />
+  {{else}}
+  <input id="inscireActivitie" type="submit" data-id="{{this.id_cours}}" value="S'inscrire" />
+  {{/if}}
+
+</div>
+{{/each}}

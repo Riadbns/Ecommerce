@@ -1,0 +1,31 @@
+<form id="formCreation" novalidate>
+    <fieldset id="fielsetform">
+        <legend>Création du compte utilisateur</legend>
+        <div id="erreur" class=" erreur">
+
+        </div>
+
+        <label> Nom:
+            <input type="text" id="nomUser" required>
+            <div id="nomError" class="error"></div>
+        </label>
+        <label> Prénom :
+            <input type="text" id="prenomUser" required>
+            <div id="prenomError" class="error"></div>
+        </label>
+
+        <label> Adresse courriel:
+            <input type="email" name="" placeholder="courriel@domaine.com " id="courrielUser" required>
+            <div id="courrielError" class="error"></div>
+
+        </label>
+        <label> Mot de passe:
+            <input type="password" name="" id="passwordUser" required>
+            <div id="passwordError" class="error"></div>
+
+        </label>
+
+
+        <input type="submit" id="soumettreuser" value="Soumettre">
+    </fieldset>
+</form>

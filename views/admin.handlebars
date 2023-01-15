@@ -1,0 +1,52 @@
+{{#each activities}}
+<div class="card">
+    <h2 id="activitie"> {{this.nom}}</h2>
+    <p id="description"><span>discription: </span> {{this.description}}</p>
+    <p id="capacite"> <span>Capacité: </span> {{this.capacite}}</p>
+    <p id="nbCours"><span> Nombre de cours: </span>{{this.nb_cours}}</p>
+    <p id="nbreInscrit"><span> Nombre de personne inscrit: </span>{{this.nbrInscrit}}/{{this.capacite}}</p>
+    <p id="Date"><span> Date début: </span> {{afficheDAte this.date_debut}}</p>
+    <p> les utilisateurs inscrits</p>
+   
+    {{#each utilisateurs}}
+    <p id="nomUser" data-id="{{this.id_utilisateur}}"><span> * </span>{{this.nom}} {{this.prenom}} </p>
+
+    {{/each}}
+    <!-- -->
+    <input id="supprimerActivitie" type="submit" data-id="{{this.id_cours}}" value="Supprimer" />
+</div>
+{{/each}}
+
+<form id="formActivitie" novalidate>
+    <fieldset>
+        <legend>Ajouter Une Activitie</legend>
+
+        <label> Nom activitie :
+            <input type="text" id="nomActivitie" placeholder="nom activitie" required>
+            <div id="nomError" class="error"></div>
+        </label>
+
+        <label> Description:
+            <textarea id="descriptionActivitie" cols="40" rows="8" placeholder="desctiption d'une activitie"
+                minlength="10" maxlength="500" required></textarea>
+            <div id="descriptionError" class="error"></div>
+        </label>
+
+        <label> La Capacite :
+            <input type="number" id="capaciteActivitie" placeholder="la capacite" min="0" max="32">
+            <div id="capaciteError" class="error"></div>
+        </label>
+
+        <label> Le nombre d'activitie :
+            <input type="number" id="nbrActivitie" placeholder="nombre d'activitie" min="0" max="12">
+            <div id="nbrActiviteError" class="error"></div>
+        </label>
+
+        <label> La date :
+            <input type="datetime-local" id="dateActivitie" required>
+            <div id="dateError" class="error"></div>
+        </label>
+
+        <input type="submit" id="Soumettre" value="Soumettre">
+    </fieldset>
+</form>

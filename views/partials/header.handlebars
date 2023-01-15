@@ -1,0 +1,41 @@
+<header>
+  <h1>
+    Centre de Formation informatique
+  </h1>
+  <nav>
+    <ul>
+      {{#unless user}}
+      <li id="creation">
+        <a href="/creation">Inscription</a>
+
+      </li>
+      <li id="connection">
+        <a href="/">Connexion</a>
+        {{/unless}}
+        {{#if user}}
+      </li>
+      <li id="activities">
+        <a href="/activitie">Activities</a>
+      </li>
+      <li id="compte">
+        <a href="/compte" id="compte">Compte</a>
+      </li>
+      {{#if isAdmin}}
+      <li id="admin">
+        <a href="/admin">Administrateur</a>
+      </li>
+      {{/if}}
+
+      {{/if}}
+
+      
+      {{#if user}}
+      <li>
+        <form method="post" action="/deconnexion">
+          <input type="submit" value="Deconnexion">
+        </form>
+      </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>

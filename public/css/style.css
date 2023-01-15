@@ -1,0 +1,303 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*******      ENTETE      ************/
+
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #142d60;
+
+}
+
+header {
+
+    background-image: url(../img/banner-g405e17e0f_1280.jpg);
+    background-size: cover;
+    height: 20em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    justify-items: right;
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+}
+
+
+nav li {
+    display: flex;
+
+    background-color: #7ca4e5;
+    color: white;
+    font-size: 1.2em;
+
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li input {
+    display: flex;
+    background-color: #7ca4e5;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    justify-content: baseline;
+
+}
+
+li form {
+    padding: 1em 1em;
+    border: 5px outset #142d60;
+
+}
+
+a,
+a:link,
+a:visited a:focus {
+    color: inherit;
+    outline: none;
+}
+
+
+nav a {
+    display: flex;
+    padding: 1em 1em;
+    border: 5px outset #142d60;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #2615e0;
+}
+
+nav a:active {
+    border: 1px inset #2615e0;
+}
+
+/*******      CSS body     ************/
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+p {
+    margin: .5rem;
+    text-align: justify;
+}
+
+span {
+    color: #2615e0;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em auto;
+
+    max-width: 800px;
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    border: 2px solid #2615e0;
+    border-radius: .2em;
+    padding: 1em;
+    margin: 1em;
+    width: 350px;
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 0 0 1em #1e3b2c;
+}
+
+.card #inscireActivitie,
+#supprimerActivitie,
+#desinscireActivitie {
+    background-color: #7ca4e5;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    padding: 7px 10px;
+    border-radius: 8px;
+    width: 50%;
+    font-size: 16px;
+
+}
+
+.card #inscireActivitie,
+#soumettreuser,
+#connexion {
+    cursor: pointer;
+}
+
+.card #inscireActivitie:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+/*************** CSS formulaire****************/
+#formActivitie,
+#formCreation,
+#form-connexion {
+
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    justify-items: center;
+    width: 750px;
+}
+
+#formActivitie,
+#formCreation,
+#form-connexion {
+    display: flex;
+    flex-direction: column;
+}
+
+#formActivitie label,
+#formCreation label,
+#form-connexion label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+#fielsetform {
+
+    border: 2px solid #2615e0;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#soumettreuser,
+#Soumettre,
+#connexion {
+    background-color: #7ca4e5;
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+
+}
+
+/************* CSS Erreur formulaire**********************/
+
+.error {
+    margin: 5px;
+    width: 130px;
+    font-size: 14px;
+    color: #C62828;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: left;
+    padding: 1px 2px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+.erreur {
+    margin: 5px;
+
+    font-size: 20px;
+    color: #C62828;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: left;
+    padding: 1px 2px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+
+}
+
+
+
+/*******     CSS     Pied de page  ************/
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #7ca4e5;
+    height: 6em;
+    font-weight: bold;
+    color: white;
+
+}
+
+#message-cookie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    top: 50%;
+    border: 1px solid #142d60;
+    background-color: rgb(180, 180, 241);
+    height: 40%;
+    width: 40%;
+    left: 30%;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#button-cookie {
+
+    padding: 10px 15px;
+    background-color: rgb(233, 232, 232);
+    cursor: pointer;
+    text-align: center;
+    top: 70%;
+    left: 100%;
+    border-radius: 15px;
+}
+
+#button-cookie:hover {
+    background-color: rgb(132, 132, 247)
+}
+
+#nomstyle {
+    font-size: 1.875em;
+    color: #142d60;
+    background-color: #FFFFFF;
+    text-align: center;
+    align-items: center;
+}
