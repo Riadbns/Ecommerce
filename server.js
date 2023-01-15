@@ -35,6 +35,7 @@ import "./authentification.js";
 
 // Création du serveur
 const app = express();
+app.enable('trust proxy');
 
 // Création de l'engin dans Express
 app.engine(
